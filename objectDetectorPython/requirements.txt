@@ -1,0 +1,16 @@
+# Requirements for Hugging Face Object Detection
+huggingface-hub
+numpy
+Pillow
+pipeline
+requests
+torch
+torchvision
+transformers
+timm
+
+# Optional: For GPU acceleration
+# torch-audio
+
+# Optional: For better visualization fonts
+# matplotlib>=3.5.0

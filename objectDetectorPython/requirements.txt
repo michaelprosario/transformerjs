@@ -9,7 +9,7 @@ huggingface-hub==0.20.3
 
 # Image processing and data handling
 Pillow==10.2.0
-numpy==1.24.4
+numpy>=1.24.4
 requests==2.31.0
 
 # Model utilities

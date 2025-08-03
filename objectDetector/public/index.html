@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 Object Detection App</h1>
+            <p>Upload an image to detect objects using AI</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <div class="file-input-wrapper">
+                        <input type="file" id="imageInput" name="image" accept="image/*" required>
+                        <label for="imageInput" class="file-input-label">
+                            <span class="upload-icon">📁</span>
+                            <span class="upload-text">Choose Image File</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="detect-btn" disabled>
+                        <span class="btn-text">Detect Objects</span>
+                        <span class="btn-loading">Processing...</span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="preview-section" id="previewSection" style="display: none;">
+                <h3>Selected Image:</h3>
+                <img id="imagePreview" alt="Preview" />
+            </div>
+
+            <div class="loading-section" id="loadingSection" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p>Analyzing image... This may take a moment.</p>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <h3>Detection Results:</h3>
+                <div class="results-summary">
+                    <span id="detectionCount">0</span> objects detected
+                </div>
+                
+                <div class="image-container">
+                    <img id="resultImage" alt="Result with detections" />
+                    <canvas id="detectionCanvas"></canvas>
+                </div>
+                
+                <div class="detections-list">
+                    <h4>Detected Objects:</h4>
+                    <ul id="detectionsList"></ul>
+                </div>
+            </div>
+
+            <div class="error-section" id="errorSection" style="display: none;">
+                <div class="error-message">
+                    <h3>❌ Error</h3>
+                    <p id="errorText"></p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="status-indicator">
+                <span id="statusText">Checking server status...</span>
+                <div class="status-dot" id="statusDot"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

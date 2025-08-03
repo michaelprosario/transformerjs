@@ -1,16 +1,36 @@
 # Requirements for Hugging Face Object Detection
-huggingface-hub
-numpy
-Pillow
-pipeline
-requests
-torch
-torchvision
-transformers
-timm
+# Tested and compatible versions for stable operation
 
-# Optional: For GPU acceleration
-# torch-audio
+# Core ML and Transformers
+transformers==4.36.2
+torch==2.2.0
+torchvision==0.17.0
+huggingface-hub==0.20.3
 
-# Optional: For better visualization fonts
-# matplotlib>=3.5.0
+# Image processing and data handling
+Pillow==10.2.0
+numpy==1.24.4
+requests==2.31.0
+
+# Model utilities
+timm==0.9.12
+datasets==2.16.1
+tokenizers==0.15.0
+
+# Audio processing (for soundfile support)
+soundfile==0.12.1
+scipy==1.11.4
+
+# Optional: For better visualization
+matplotlib==3.8.2
+
+# Optional: For GPU acceleration (uncomment if using CUDA)
+# torchaudio==2.1.2
+
+# Optional: For Jupyter notebook support
+# ipython==8.18.1
+# jupyter==1.0.0
+
+# Development and testing
+# pytest==7.4.3
+# black==23.12.1
